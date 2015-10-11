@@ -41,7 +41,6 @@ public class MainActivity extends ActionBarActivity {
         boolean hasCream = addCreamCheckBox.isChecked();
 
         CheckBox addMMCheckBox = (CheckBox) findViewById(R.id.mmCBox_id);
-        boolean addMM = 
         creatOrderSummary(price, hasCream);
 
 
