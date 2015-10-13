@@ -42,16 +42,21 @@ public class MainActivity extends ActionBarActivity {
 
         CheckBox addMMCheckBox = (CheckBox) findViewById(R.id.mmCBox_id);
         boolean hasMM = addMMCheckBox.isChecked();
-        creatOrderSummary(price, hasCream, hasMM);
+
+        TextView addName = (TextView) findViewById(R.id.customName_id);
+        String   customName = (String) addName.getText();
+
+        creatOrderSummary(price, customName, hasCream, hasMM);
 
 
 
     }
 
-    private void creatOrderSummary (int price, boolean hasCream, boolean hasChoclate){
-        String summaryMessage = "name:balonfan" + "\n" + "quantity" + "=" + quantity +
+    private void creatOrderSummary (int price, String custoName, boolean hasCream, boolean hasChoclate){
+        displayMessage(custoName+"\n");
+        String summaryMessage = "quantity" + "=" + quantity +
                "\nHas cream: " + hasCream;
-            summaryMessage += "\nHas choclate " + hasChoclate;
+            summaryMessage += "\nHas choclate: " + hasChoclate;
         summaryMessage += "\ntotal:" + "$" + price;
         summaryMessage += "\nthank you.";
         displayMessage(summaryMessage);

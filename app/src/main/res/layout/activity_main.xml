@@ -11,7 +11,15 @@
 
         tools:context=".MainActivity">
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text|textCapWords|textNoSuggestions"
+            android:hint="name"
+            android:layout_marginBottom="16dp"/>
+
         <TextView
+            android:id="@+id/customName_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
